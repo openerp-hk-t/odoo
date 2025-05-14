@@ -12,6 +12,13 @@
             'increment_widget/static/src/xml/increment_widget.xml'
         ],
     },
+    
+    'author': "cdn.odoo.red",
+    'website': "https://cdn.odoo.red/",
+
+    'category': 'Extra Tools',
+    'version': '0.1',
+    
     'installable': True,
     'application': False,
 }
