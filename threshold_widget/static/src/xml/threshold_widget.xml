@@ -1,0 +1,7 @@
+<templates>
+    <t t-name="web.ThresholdWidget">
+        <div class="threshold-widget" t-att-style="'color: ' + (isOverThreshold ? 'red' : 'green')">
+            <span t-esc="displayValue"/>
+        </div>
+    </t>
+</templates>
