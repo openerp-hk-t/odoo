@@ -21,4 +21,7 @@
     
     'installable': True,
     'application': False,
+    'images': ['static/description/icon.gif'],
+    'license': 'LGPL-3',
+    
 }
