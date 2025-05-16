@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="openerphk_authority.ZTREEMany2ManyField">
+        <div class="content_wrap">
+            <div class="row m-3">
+                <span>Explanation: Please drag the menu with the arrow pointing to set permissions.</span>
+                <span>1: Drag the submenu from the left box to the right to make it visible.</span>
+                <span>2: To cancel the setting, please drag the right submenu to any position.</span>
+                <span>3: Left click on the sub menu in the box on the right to set subdivision permissions.</span>
+                <span>4: Enter keywords into the search box and press enter to search. The relevant menus will automatically expand. If the search box has no value, all menus will automatically expand.</span>
+            </div>
+            <input type="text" class="mb-2" style="width:250px"
+                   t-on-keydown="(ev) => this.onCellKeydown(ev, null)"
+                   placeholder="Enter keywords and press enter to search menu"/>
+            <div class="row">
+                <ul id="AllMenutree" class="col-lg-5 ztree m-0"/>
+                <div class="col-lg-1 p-0">
+                    <img class="align-items-center justify-content-between"
+                         width="50px" height="35px" style="margin-top:240px;margin-left:10px"
+                         t-attf-src="/openerphk_authority/static/template/move_right.png"/>
+                </div>
+                <ul id="authorityMenutree" class="col-lg-5 ztree m-0"/>
+                <div t-att-class="tempAuth.hide? 'o_hidden': ''" class="col-lg-1 p-0" t-ref="move_right">
+                    <img class="align-items-center justify-content-between"
+                         width="50px" height="35px" style="margin-top:240px;margin-left:10px"
+                         t-attf-src="/openerphk_authority/static/template/move_right.png"/>
+                </div>
+                <div t-att-class="tempAuth.hide? 'o_hidden': ''"
+                     class="subAuthority"
+                     menuId="0"
+                     t-ref="sub_authority_warp"
+                >
+                    <div class="row m-3">
+                        <span class="d-flex align-items-center justify-content-between"
+                              style="font-weight: bold;" id="openerphk_menu_name"/>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_write?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_write"
+                                  value="tempAuth.authority_data.openerphk_write"/>
+                            edit
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_create?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_create"
+                                  value="tempAuth.authority_data.openerphk_create"/>
+                            create
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_delete?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_delete"
+                                  value="tempAuth.authority_data.openerphk_delete"/>
+                            delete
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_export?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_export"
+                                  value="tempAuth.authority_data.openerphk_export"/>
+                            export
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <ul id="AllMenutree_app" class="col-lg-5 ztree m-0"/>
+                <div class="col-lg-1 p-0">
+                    <img class="align-items-center justify-content-between"
+                         width="50px" height="35px" style="margin-top:240px;margin-left:10px"
+                         t-attf-src="/openerphk_authority/static/template/move_right.png"/>
+                </div>
+                <ul id="authorityMenutree_app" class="col-lg-5 ztree m-0"/>
+                <div t-att-class="tempAuth.hide? 'o_hidden': ''" class="col-lg-1 p-0" t-ref="move_right_app">
+                    <img class="align-items-center justify-content-between"
+                         width="50px" height="35px" style="margin-top:240px;margin-left:10px"
+                         t-attf-src="/openerphk_authority/static/template/move_right.png"/>
+                </div>
+                <div t-att-class="tempAuth.hide? 'o_hidden': ''"
+                     class="subAuthority"
+                     menuId="0"
+                     t-ref="sub_authority_warp_app"
+                >
+                    <div class="row m-3">
+                        <span class="d-flex align-items-center justify-content-between"
+                              style="font-weight: bold;" id="openerphk_menu_name_app"/>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAppAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_write?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_write_app"
+                                  value="tempAuth.authority_data.openerphk_write"/>
+                            edit
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAppAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_create?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_create_app"
+                                  value="tempAuth.authority_data.openerphk_create"/>
+                            create
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAppAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_delete?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_delete_app"
+                                  value="tempAuth.authority_data.openerphk_delete"/>
+                            delete
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class="custom-checkbox"
+                               t-on-click="onAppAuthorityClicked">
+                            <span t-att-class="tempAuth.authority_data.openerphk_export?'checkbox-custom-clicked':''"
+                                  class="checkbox-custom" id="openerphk_export_app"
+                                  value="tempAuth.authority_data.openerphk_export"/>
+                            export
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,451 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openerphk_authority
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241111\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-14 03:47+0000\n"
+"PO-Revision-Date: 2025-05-14 11:55+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid "1: Drag the submenu from the left box to the right to make it visible."
+msgstr "1：将子菜单从左侧框向右拖动，使其可见。"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid ""
+"2: To cancel the setting, please drag the right submenu to any position."
+msgstr "2：要取消设置，请将右侧子菜单拖动到任何位置。"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid ""
+"3: Left click on the sub menu in the box on the right to set subdivision "
+"permissions."
+msgstr "3：左键单击右侧框中的子菜单，设置细分权限。"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid ""
+"4: Enter keywords into the search box and press enter to search. The "
+"relevant menus will automatically expand. If the search box has no value, "
+"all menus will automatically expand."
+msgstr ""
+"4：在搜索框中输入关键字，然后按Enter键进行搜索。相关菜单将自动展开。如果搜索"
+"框没有值，所有菜单都将自动展开。"
+
+#. module: openerphk_authority
+#: model:ir.ui.menu,name:openerphk_authority.menu_app_menu
+msgid "APP menu configuration"
+msgstr "APP菜单配置"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.js:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.js:0
+#, python-format
+msgid "Accepted file extensions"
+msgstr "接受的文件扩展名"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__app_menu_ids
+msgid "App permission menu configuration"
+msgstr "App权限菜单配置"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__app_authority_ids
+msgid "App sub permission group"
+msgstr "App子权限组"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__has_allocate_authority
+msgid "Assign Role"
+msgstr "分配角色"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.openerphk_res_users_authority_tree
+msgid "Assigning roles"
+msgstr "分配角色"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__authority_id
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__authority_id
+msgid "Authority"
+msgstr "权限"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_base
+msgid "Base"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__child_ids
+msgid "Child"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__create_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__create_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__create_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__create_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__create_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__create_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__create_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__create_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.openerphk_authority_view_form_null_data
+msgid "Currently, there are no permissions available"
+msgstr "当前没有可用权限"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__display_name
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__display_name
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__display_name
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__display_name
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__display_name
+msgid "Display Name"
+msgstr "名称"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__user_ids
+msgid "Effective user"
+msgstr "有效用户"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid "Enter keywords and press enter to search menu"
+msgstr "输入关键字并按Enter进入搜索菜单"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__file
+msgid "Excel File"
+msgstr "excel 文件"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid ""
+"Explanation: Please drag the menu with the arrow pointing to set permissions."
+msgstr "说明：请拖动菜单，箭头指向设置权限。"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.openerphk_authority_view_form
+msgid "Export Template - Group"
+msgstr "导出模板-用户组"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.openerphk_authority_view_form
+msgid "Export Template - User"
+msgstr "导出模板-用户"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__filename
+msgid "Filename"
+msgstr "文件名"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__id
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__id
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__id
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__id
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__id
+msgid "ID"
+msgstr "id"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.openerphk_authority_view_form
+msgid "Import Group"
+msgstr "导入用户组"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.openerphk_authority_view_form
+msgid "Import users"
+msgstr "导入用户"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__write_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__write_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__write_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__write_uid
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__write_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__write_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__write_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__write_date
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__menu_id
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__menu_id
+msgid "Menu"
+msgstr "菜单"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.js:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.js:0
+#, python-format
+msgid "Number of files"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__parent_id
+msgid "Parent"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__name
+msgid "Permission Name"
+msgstr "权限名称"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_openerphk_authority
+msgid "Permission configuration"
+msgstr "权限配置"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__menu_ids
+msgid "Permission menu configuration"
+msgstr "权限配置菜单"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_openerphk_authority__sub_authority_ids
+msgid "Sub permission group"
+msgstr "子权限组"
+
+#. module: openerphk_authority
+#: model:ir.ui.menu,name:openerphk_authority.openerphk_system_setting_root
+msgid "System settings"
+msgstr "系统设置"
+
+#. module: openerphk_authority
+#: model:ir.ui.menu,name:openerphk_authority.menu_openerphk_authority
+msgid "Permission configuration"
+msgstr "权限配置"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_res_users
+msgid "User"
+msgstr "用户"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__authority_ids
+#: model:ir.ui.menu,name:openerphk_authority.menu_openerphk_res_users_authority
+msgid "User Permissions"
+msgstr "用户权限"
+
+#. module: openerphk_authority
+#: model:ir.actions.act_window,name:openerphk_authority.action_openerphk_res_users_authority_tree
+msgid "User permission list"
+msgstr "用户权限列表"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_ir_ui_view
+msgid "View"
+msgstr "视图"
+
+#. module: openerphk_authority
+#: model:ir.actions.act_window,name:openerphk_authority.app_menu_action
+msgid "app menu"
+msgstr "app 菜单"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_app_menu
+msgid "app.menu"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_app_menu_authority
+msgid "app.menu.authority"
+msgstr ""
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.import_authority_wizard_form
+msgid "cancel"
+msgstr "取消"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__openerphk_create
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__openerphk_create
+#, python-format
+msgid "create"
+msgstr "创建"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__openerphk_delete
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__openerphk_delete
+#, python-format
+msgid "delete"
+msgstr "删除"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__openerphk_write
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__openerphk_write
+#, python-format
+msgid "edit"
+msgstr "编辑"
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu_authority__openerphk_export
+#: model:ir.model.fields,field_description:openerphk_authority.field_sub_menu_authority__openerphk_export
+#, python-format
+msgid "export"
+msgstr "导出"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__sex
+msgid "gender"
+msgstr "性别"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.import_authority_wizard_form
+msgid "import"
+msgstr "导入"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_import_authority_wizard
+msgid "import wizard"
+msgstr "导入向导"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_app_menu__name
+msgid "menu name"
+msgstr "菜单名称"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__usr_name
+msgid "name"
+msgstr "名称"
+
+#. module: openerphk_authority
+#: model_terms:ir.ui.view,arch_db:openerphk_authority.app_menu_view_tree
+msgid "parent node"
+msgstr "父节点"
+
+#. module: openerphk_authority
+#: model:ir.actions.act_window,name:openerphk_authority.openerphk_authority_action
+#: model:ir.model.fields,field_description:openerphk_authority.field_import_authority_wizard__authority_id
+msgid "permission"
+msgstr "权限"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__user_state
+msgid "state"
+msgstr "状态"
+
+#. module: openerphk_authority
+#: model:ir.model,name:openerphk_authority.model_sub_menu_authority
+msgid "sub.menu.authority"
+msgstr ""
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid "tempAuth.authority_data.openerphk_create"
+msgstr ""
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid "tempAuth.authority_data.openerphk_delete"
+msgstr ""
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid "tempAuth.authority_data.openerphk_export"
+msgstr ""
+
+#. module: openerphk_authority
+#. odoo-javascript
+#: code:addons/hlj_addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#: code:addons/openerphk_authority/static/src/ztree_many2many/ztree_many2many.xml:0
+#, python-format
+msgid "tempAuth.authority_data.openerphk_write"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__work_phone
+msgid "work phone"
+msgstr "电话"
+
+#. module: openerphk_authority
+#: model:ir.model.fields,field_description:openerphk_authority.field_res_users__work_address
+msgid "workplace"
+msgstr "工作地址"
+
+#. module: openerphk_authority
+#: model:ir.ui.menu,name:openerphk_authority.menu_openerphk_authority
+msgid "权限配置"
+msgstr ""
+
+#. module: openerphk_authority
+#: model:ir.model.fields.selection,name:openerphk_authority.selection__res_users__user_state__normal
+msgid "normal"
+msgstr "正常"
+
+#. module: openerphk_authority
+#: model:ir.model.fields.selection,name:openerphk_authority.selection__res_users__user_state__disabled
+msgid "disabled"
+msgstr "禁用"

@@ -1,0 +1,81 @@
+
+ul.ztree {
+    margin-top: 10px;
+    border: 1px solid #617775;
+    background: #f0f6e4;
+    width:300px;
+    height:500px;
+    overflow-y:scroll;
+    overflow-x:auto;
+}
+
+ul.log {
+    border: 1px solid #617775;
+    background: #f0f6e4;
+    width:300px;
+    height:170px;
+    overflow: hidden;
+}
+
+ul.log.small {
+    height:45px;
+}
+
+ul.log li {
+    color: #666666;
+    list-style: none;
+    padding-left: 10px;
+}
+
+ul.log li.dark {
+    background-color: #E3E3E3;
+}
+
+.subAuthority {
+    margin-top: 100px;
+    border: 1px solid #617775;
+    background: #f0f6e4;
+    width:200px;
+    height:300px;
+}
+
+/* 自定义复选框的基本样式 */
+.checkbox-custom {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    position: relative;
+    border: 1px solid black;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.custom-checkbox:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */
+  color: #473e64;
+}
+
+.custom-checkbox {
+    cursor: pointer;
+}
+/* 选中状态下的样式 */
+.custom-checkbox .checkbox-custom {
+    border-color: black;
+    background-color: white;
+}
+
+/* 选中状态下的对勾样式 */
+.custom-checkbox .checkbox-custom-clicked::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: green;
+    transform: rotate(45deg);
+}

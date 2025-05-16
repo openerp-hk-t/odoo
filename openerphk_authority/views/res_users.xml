@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--    <record id="gms_res_users_tree_inherit" model="ir.ui.view">-->
+    <!--        <field name="name">gms.res.users.tree.inherit</field>-->
+    <!--        <field name="model">res.users</field>-->
+    <!--        <field name="inherit_id" ref="gms_data_base.gms_res_users_tree" />-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <xpath expr="//field[@name='location_id']" position="after">-->
+    <!--                <field name="has_allocate_authority" column_invisible="1"/>-->
+    <!--                <button name="allocate_roles" type="object" string="分配角色" class="btn-secondary" icon="fa-users"-->
+    <!--                        invisible="has_allocate_authority"/>-->
+    <!--                <button name="allocate_roles" type="object" string="分配角色" class="btn-primary" icon="fa-users"-->
+    <!--                        invisible="not has_allocate_authority"/>-->
+    <!--            </xpath>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <record id="openerphk_res_users_authority_form" model="ir.ui.view">
+        <field name="name">openerphk.res.users.authority.form</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="authority_ids" widget="one2many">
+                        <tree>
+                            <field name="name"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="openerphk_res_users_authority_tree" model="ir.ui.view">
+        <field name="name">openerphk.res.users.authority.tree</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="has_allocate_authority" column_invisible="1"/>
+                <field name="login" readonly="1"/>
+<!--                <field name="usr_name" readonly="1"/>-->
+<!--                <field name="sex" readonly="1"/>-->
+<!--                <field name="sex" readonly="1"/>-->
+<!--                <field name="phone" readonly="1"/>-->
+<!--                <field name="work_phone" readonly="1"/>-->
+<!--                <field name="work_address" readonly="1"/>-->
+                <field name="email" readonly="1"/>
+                <field name="user_state" readonly="1" decoration-success="user_state == 'normal'"
+                       decoration-danger="user_state == 'disabled'"/>
+                <!--                <field name="authority_ids" widget="one2many"/>-->
+                <button name="allocate_roles" type="object" string="Assigning roles" class="btn-secondary" icon="fa-users"
+                        invisible="has_allocate_authority"/>
+                <button name="allocate_roles" type="object" string="Assigning roles" class="btn-primary" icon="fa-users"
+                        invisible="not has_allocate_authority"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_openerphk_res_users_authority_tree" model="ir.actions.act_window">
+        <field name="name">User permission list</field>
+        <field name="res_model">res.users</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="openerphk_res_users_authority_tree"/>
+        <field name="target">current</field>
+    </record>
+
+    <!--    <menuitem id="menu_openerphk_res_users_root" name="权限管理" sequence="10"/>-->
+
+    <menuitem id="menu_openerphk_res_users_authority"
+              name="User Permissions"
+              parent="openerphk_authority.openerphk_system_setting_root"
+              action="action_openerphk_res_users_authority_tree"
+              sequence="1"/>
+</odoo>

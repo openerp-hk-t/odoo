@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+
+        <menuitem id="openerphk_system_setting_root" name="System settings" sequence="23"/>
+
+        <menuitem id="openerphk_authority_menu_null_data" action="openerphk_authority.openerphk_authority_action_null_data"
+                  parent="openerphk_authority.openerphk_system_setting_root"/>
+    </data>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_openerphk_authority,openerphk.authority,model_openerphk_authority,base.group_user,1,1,1,1
+access_sub_menu_authority,sub.menu.authority,model_sub_menu_authority,base.group_user,1,1,1,1
+access_app_menu,app.menu,model_app_menu,base.group_user,1,1,1,1
+access_app_menu_authority,app.menu.authority,model_app_menu_authority,base.group_user,1,1,1,1
+access_import_authority_wizard,import.authority.wizard,model_import_authority_wizard,base.group_user,1,1,1,1

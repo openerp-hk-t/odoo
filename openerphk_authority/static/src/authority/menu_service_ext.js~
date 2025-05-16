@@ -1,0 +1,205 @@
+/** @odoo-module **/
+
+import { browser } from "@web/core/browser/browser";
+import { registry } from "@web/core/registry";
+import { session } from "@web/session";
+import { jsonrpc } from "@web/core/network/rpc_service";
+
+const loadMenusUrl = `/web/webclient/load_menus`;
+const menuServiceRegistry = registry.category("services");
+
+// import * as ajax from "web.ajax";
+
+function makeFetchLoadMenus() {
+    const cacheHashes = session.cache_hashes;
+    let loadMenusHash = cacheHashes.load_menus || new Date().getTime().toString();
+    return async function fetchLoadMenus(reload) {
+        if (reload) {
+            loadMenusHash = new Date().getTime().toString();
+        } else if (odoo.loadMenusPromise) {
+            return odoo.loadMenusPromise;
+        }
+        const res = await browser.fetch(`${loadMenusUrl}/${loadMenusHash}`);
+        if (!res.ok) {
+            throw new Error("Error while fetching menus");
+        }
+        return res.json();
+    };
+}
+
+function deepDeleteSubChildren(menusData, delete_ids) {
+    for(let i=0; i< delete_ids.length; i++){
+        if(!menusData[delete_ids[i]]){
+            continue
+        }
+        if(menusData[delete_ids[i]].children.length == 0){
+            delete menusData[delete_ids[i]]
+        }else{
+            deepDeleteSubChildren(menusData, menusData[delete_ids[i]].children)
+            delete menusData[delete_ids[i]]
+        }
+    }
+}
+
+function isSubArray(arr1, arr2) {
+    // 检查 arr2 是否是 arr1 的子数组
+    if(arr2.length == 0){
+        return false;
+    }
+    return arr2.every(item => arr1.includes(item));
+}
+
+function cleanRootChildren(menusData, delete_ids) {
+    Object.keys(menusData).forEach(key => {
+        if(isSubArray(delete_ids, menusData[key].children) && menusData['root'].children.includes(menusData[key].id)){
+            delete menusData[key]
+        }
+    });
+}
+
+function cleanChildrenNum(menusData, delete_ids) {
+    let res = [];
+    let rm = [];
+    Object.keys(menusData).forEach(key => {
+        if(isSubArray(delete_ids, menusData[key].children)){
+//            if(menusData['root'].children.includes(menusData[key].id)){
+//                res.push(menusData[key].id)
+//            }
+            res.push(menusData[key].id)
+            rm.push(menusData[key].id)
+            delete menusData[key]
+        }else{
+            menusData[key].children = menusData[key].children.filter(item => !delete_ids.includes(item));
+        }
+    });
+    if(res.length>0){
+        return rm.concat(cleanChildrenNum(menusData, res));
+    }
+    return rm;
+}
+
+function getArrIntersection(arr1, arr2){
+    let arr3 = [];
+    let hashmap = {};
+
+    arr1.forEach(function(element){
+        hashmap[element] = 1;
+    })
+
+    arr2.forEach(function(element){
+        if(hashmap[element] === 1){
+            arr3.push(element);
+            hashmap[element]++;
+        }
+    })
+    return arr3
+}
+
+function makeMenus(env, menusData, fetchLoadMenus, force_menu) {
+    let currentAppId;
+    let root_list = force_menu["root"];
+    let hide_list = force_menu["hide"];
+    if(root_list.length > 0){
+        let _menusData = $.extend(true, {}, menusData);
+        menusData['root'].children = getArrIntersection(menusData['root'].children, root_list)
+        let temp = []
+        for(let i=0; i<_menusData['root'].children.length; i++){
+            if(root_list.indexOf(_menusData['root'].children[i]) == -1){
+                temp.push(_menusData['root'].children[i])
+            }
+        }
+        deepDeleteSubChildren(menusData, temp)
+    }
+    if(hide_list.length > 0){
+//        for(let i=0; i < hide_list.length; i++){
+//            console.log(hide_list[i], menusData[hide_list[i]])
+//            let _parent = menusData[menusData[hide_list[i]].appID]
+//            let flag = -1;
+//            for(let j=0; j < _parent.children.length; j++){
+//                if(_parent.children[j] == hide_list[i]){
+//                    flag = j
+//                }
+//            }
+//            if(flag != -1){
+//                _parent.children.splice(flag, 1);
+//            }
+//        }
+        cleanRootChildren(menusData, hide_list);
+        deepDeleteSubChildren(menusData, hide_list);
+        cleanChildrenNum(menusData, hide_list);
+    }
+    if(env.services.user.userId!=2 && root_list.length == 0 && hide_list.length == 0){
+        // 当用户不为admin 且没有配置任何权限时，不给此用户查看正常菜单功能
+        menusData = {'root': menusData['root']};
+        menusData['root']['xmlid'] = 'openerphk_aio.openerphk_authority_menu_null_data';
+        menusData['root']['children'] = [];
+    }
+    return {
+        getAll() {
+//            console.log(menusData)
+            return Object.values(menusData);
+        },
+        getApps() {
+            return this.getMenu("root").children.map((mid) => this.getMenu(mid));
+        },
+        getMenu(menuID) {
+//            console.log(menuID, menusData[menuID])
+            return menusData[menuID];
+        },
+        getCurrentApp() {
+            if (!currentAppId) {
+                return;
+            }
+            return this.getMenu(currentAppId);
+        },
+        getMenuAsTree(menuID) {
+            const menu = this.getMenu(menuID);
+            if (!menu.childrenTree) {
+                menu.childrenTree = menu.children.map((mid) => this.getMenuAsTree(mid));
+            }
+            return menu;
+        },
+        async selectMenu(menu) {
+            menu = typeof menu === "number" ? this.getMenu(menu) : menu;
+            if (!menu.actionID) {
+                return;
+            }
+            await env.services.action.doAction(menu.actionID, { clearBreadcrumbs: true });
+            this.setCurrentMenu(menu);
+        },
+        setCurrentMenu(menu) {
+            menu = typeof menu === "number" ? this.getMenu(menu) : menu;
+            if (menu && menu.appID !== currentAppId) {
+                currentAppId = menu.appID;
+                env.bus.trigger("MENUS:APP-CHANGED");
+                // FIXME: lock API: maybe do something like
+                // pushState({menu_id: ...}, { lock: true}); ?
+                env.services.router.pushState({ menu_id: menu.id }, { lock: true });
+            }
+        },
+        async reload() {
+            if (fetchLoadMenus) {
+                menusData = await fetchLoadMenus(true);
+                env.bus.trigger("MENUS:APP-CHANGED");
+            }
+        },
+    };
+}
+
+export const menuService = {
+    dependencies: ["action", "router"],
+    async start(env) {
+        const fetchLoadMenus = makeFetchLoadMenus();
+        let force_menu =  await jsonrpc('/web/dataset/call_kw', {
+            model: 'openerphk.authority',
+            method: 'get_users_menu',
+            args: [{}],
+            kwargs: {},
+        })
+        const menusData = await fetchLoadMenus();
+        return makeMenus(env, menusData, fetchLoadMenus, force_menu);
+    },
+};
+
+menuServiceRegistry.remove("menu");
+menuServiceRegistry.add("menu", menuService);

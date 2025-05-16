@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="openerphk_authority_view_tree" model="ir.ui.view">
+        <field name="name">openerphk_authority_tree</field>
+        <field name="model">openerphk.authority</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="openerphk_authority_view_form" model="ir.ui.view">
+        <field name="name">openerphk_authority_form</field>
+        <field name="model">openerphk.authority</field>
+        <field name="arch" type="xml">
+           <form>
+               <header>
+                   <button name="download_template" type="object" string="Export Template - User" context="{'import_type': 'user'}"/>
+                   <button name="import_user_data" type="object" string="Import users"/>
+                   <button name="download_template" type="object" string="Export Template - Group" context="{'import_type': 'group'}"/>
+                   <button name="import_group_data" type="object" string="Import Group"/>
+               </header>
+               <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="menu_ids" widget="ztree_many2many"/>
+                        <field name="user_ids" context="{'tree_view_ref': 'openerphk_data_base.openerphk_res_users_create_tree'}">
+                            <tree>
+                                <field name="login" readonly="1"/>
+                                <field name="usr_name" readonly="1"/>
+                                <field name="sex" readonly="1"/>
+                                <field name="sex" readonly="1"/>
+                                <field name="phone" readonly="1"/>
+                                <field name="work_phone" readonly="1"/>
+                                <field name="work_address" readonly="1"/>
+                                <field name="email" readonly="1"/>
+                                <field name="user_state" readonly="1" decoration-success="user_state == 'normal'" decoration-danger="user_state == 'disabled'"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+           </form>
+        </field>
+    </record>
+
+
+    <record id="openerphk_authority_view_form_null_data" model="ir.ui.view">
+        <field name="name">openerphk_authority_form</field>
+        <field name="model">openerphk.authority</field>
+        <field name="arch" type="xml">
+           <form>
+               <sheet>
+                    <h1>Currently, there are no permissions available</h1>
+                </sheet>
+           </form>
+        </field>
+    </record>
+
+    <record id="openerphk_authority_action" model="ir.actions.act_window">
+        <field name="name">permission</field>
+        <field name="res_model">openerphk.authority</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{
+            'tree_view_ref': 'openerphk_authority.openerphk_authority_view_tree',
+            'form_view_ref': 'openerphk_authority.openerphk_authority_view_form',
+        }</field>
+    </record>
+
+    <menuitem id="openerphk_system_setting_root" name="System settings" sequence="23"/>
+
+    <menuitem name="Permission configuration" id="menu_openerphk_authority"
+              parent="openerphk_authority.openerphk_system_setting_root"
+              action="openerphk_authority_action"
+              sequence="11" groups="base.group_user"/>
+
+    <record id="app_menu_view_tree" model="ir.ui.view">
+        <field name="name">app_menu_tree</field>
+        <field name="model">app.menu</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="parent_id" string="parent node"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="app_menu_action" model="ir.actions.act_window">
+        <field name="name">app menu</field>
+        <field name="res_model">app.menu</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem name="APP menu configuration" id="menu_app_menu"
+              parent="openerphk_authority.openerphk_system_setting_root"
+              action="app_menu_action"
+              sequence="12" groups="base.group_user"/>
+
+</odoo>
