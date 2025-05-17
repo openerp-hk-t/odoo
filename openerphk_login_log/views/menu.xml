@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="openerphk_system_setting_root" name="系统设置" sequence="23"/>
+
+    <menuitem id="login_log_menu" name="登录日志" parent="openerphk_login_log.openerphk_system_setting_root" action="login_log_act" sequence="50"/>
+
+</odoo>

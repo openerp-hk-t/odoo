@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="login_log_tree" model="ir.ui.view">
+        <field name="name">login.log.tree</field>
+        <field name="model">login.log</field>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0" duplicate="0" default_order="login_time desc">
+                <field name="user_id" readonly="1"/>
+                <field name="user_name" readonly="1"/>
+                <field name="login_ip" readonly="1"/>
+                <!--                <field name="operating_system" readonly="1"/>-->
+                <field name="browser" readonly="1"/>
+                <field name="login_time" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="login_log_search_view" model="ir.ui.view">
+        <field name="name">login.log.search</field>
+        <field name="model">login.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="user_id"/>
+                <field name="user_name"/>
+                <field name="login_ip"/>
+                <field name="browser"/>
+                <field name="login_time"/>
+
+                <group expand="0" string="时间筛选">
+                    <filter name="today" string="今天" domain="[('login_time', '>=', (context_today()))]"/>
+                    <filter name="last_7_days" string="近7天"
+                            domain="[('login_time', '>=', (context_today() - datetime.timedelta(days=7)))]"/>
+                    <filter name="this_month" string="本月"
+                            domain="[('login_time', '>=', (context_today().replace(day=1)))]"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="login_log_act" model="ir.actions.act_window">
+        <field name="name">登录日志</field>
+        <field name="res_model">login.log</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>
