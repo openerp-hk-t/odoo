@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "OpenerpHk_widget",
+    'name': "Split Layout",
 
     'summary': "A left-list and right-form layout",
 
