@@ -1,5 +1,5 @@
 {
-    'name': 'Increment Widget',
+    'name': 'Auto increment',
     'version': '1.0',
     'category': 'Technical',
     'summary': 'A widget to increment field value from 0 to target',
