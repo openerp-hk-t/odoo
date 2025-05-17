@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "OpenerpHk_login_log",
+    'name': "Login Log",
 
     'summary': "Login log",
 
