@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "OpenerpHk_authority",
+    'name': "Graphical Access Control",
 
     'summary': "Graphical Access Control",
 
