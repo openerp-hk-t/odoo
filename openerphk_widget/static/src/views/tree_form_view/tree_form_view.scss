@@ -1,0 +1,42 @@
+.o_tree_form_view_view {
+  .o_content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .tree-form-tree {
+    width: 40%;
+    border-right: 1px solid #dee2e6;
+
+    .o_list_table {
+      tbody {
+        tr {
+          &.active {
+            td {
+              background-color: #e2e4e5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tree-form-resize {
+    height: 100%;
+    width: 10px;
+    cursor: e-resize;
+    margin: 0 5px 0 5px;
+    background-color: #d8d8d8;
+  }
+
+  .tree-form-form {
+    overflow: auto;
+    height: 100%;
+    width: 60%;
+
+    .o_form_renderer {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

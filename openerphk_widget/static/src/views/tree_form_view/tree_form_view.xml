@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="openerphk_widget.TreeFormRenderer" t-inherit="web.ListRenderer" t-inherit-mode="primary">
+        <xpath expr="//div[hasclass('o_list_renderer')]" position="attributes">
+            <attribute name="t-att-class">'tree-form-tree'</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('o_list_renderer')]" position="after">
+            <div class="tree-form-resize" t-on-pointerdown.stop.prevent="onStartTreeFormReSize"/>
+            <div class="tree-form-form">
+                <FormRenderer archInfo="treeFrom.archInfo" record="treeFrom.current_record"
+                              t-if="treeFrom.current_record"/>
+            </div>
+        </xpath>
+    </t>
+
+</templates>

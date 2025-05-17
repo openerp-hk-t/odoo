@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-inherit="web.Pager" t-inherit-mode="extension">
+        <xpath expr="//t[@t-if='state.isEditing']" position="before">
+            显示
+        </xpath>
+        <xpath expr="//t[@t-if='props.updateTotal']" position="before">
+            共
+        </xpath>
+        <xpath expr="//span[hasclass('o_pager_counter')]" position="inside">
+            记录
+        </xpath>
+    </t>
+
+</templates>

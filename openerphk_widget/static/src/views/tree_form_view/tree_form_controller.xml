@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="openerphk_widget.TreeFormView" t-inherit="web.ListView" t-inherit-mode="primary">
+        <xpath expr="//t[@t-component='props.Renderer']" position="attributes">
+            <attribute name="onFormChange">onFormChange.bind(this)</attribute>
+            <attribute name="onClickSave">onClickSave.bind(this)</attribute>
+        </xpath>
+    </t>
+
+    <t t-name="openerphk_widget.TreeFormView.Buttons">
+        <div class="o_list_buttons d-flex gap-1 d-empty-none align-items-baseline" role="toolbar" aria-label="Main actions">
+            <t t-if="isFormChange">
+                <button type="button" class="btn btn-primary o_list_button_save" data-hotkey="s" t-on-click.stop="onClickSave">
+                    Save
+                </button>
+                <button type="button" class="btn btn-secondary o_list_button_discard" data-hotkey="j" t-on-click.stop="onClickDiscard">
+                    Discard
+                </button>
+            </t>
+        </div>
+    </t>
+
+</templates>
