@@ -4,9 +4,7 @@
 
     'summary': "A left-list and right-form layout",
 
-    'description': "A left-list and right-form layout streamlines navigation and displays real-time details, enhancing user efficiency and experience."
-        
-    """,
+    'description': "A left-list and right-form layout streamlines navigation and displays real-time details, enhancing user efficiency and experience.",
     'author': "cdn.odoo.red",
     'website': "https://cdn.odoo.red/",
     'version': '17.0.0.1',
