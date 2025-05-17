@@ -1,5 +1,5 @@
 {
-    'name': 'Threshold Widget',
+    'name': 'Threshold Color Change',
     'version': '1.0',
     'category': 'Technical',
     'summary': 'A widget to make field text red when value exceeds a threshold',
