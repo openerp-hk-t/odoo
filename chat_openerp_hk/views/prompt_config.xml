@@ -1,0 +1,50 @@
+<odoo>
+    <data>
+        <!-- Prompt Template List View -->
+        <record id="view_prompt_config_form" model="ir.ui.view">
+            <field name="name">prompt.config.form</field>
+            <field name="model">prompt.config</field>
+            <field name="arch" type="xml">
+                <form string="Prompt">
+                    <sheet>
+                        <group>
+                            <!-- Template Name-->
+                            <field name="name" required="1"/>
+                            <!-- Default Template -->
+                            <field name="default_prompt"/>
+                        </group>
+
+                        <notebook>
+                            <page string="System">
+                                <field name="system" required="1"/>
+                            </page>
+                            <page string="Output Format">
+                                <field name="output_format" required="1"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Prompt Template Tree View -->
+        <record id="view_prompt_config_tree" model="ir.ui.view">
+            <field name="name">prompt.config.tree</field>
+            <field name="model">prompt.config</field>
+            <field name="arch" type="xml">
+                <tree string="Prompt">
+                    <field name="name"/>
+                    <field name="default_prompt"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_prompt_config" model="ir.actions.act_window">
+            <field name="name">Prompt</field>
+            <field name="res_model">prompt.config</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

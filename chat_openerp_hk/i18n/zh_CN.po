@@ -1,0 +1,283 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* chat_openerp_hk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20250223\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-28 06:52+0000\n"
+"PO-Revision-Date: 2025-04-28 15:03+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: chat_openerp_hk
+#: model:ir.ui.menu,name:chat_openerp_hk.chat_openerp_hk_menu
+msgid "AI"
+msgstr "AI\t"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model,name:chat_openerp_hk.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__create_uid
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__create_date
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__is_out_default
+msgid "Default Arrange Model"
+msgstr "默认优化模型"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__is_chat_default
+msgid "Default Chat Model"
+msgstr "默认聊天模型"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__default_prompt
+msgid "Default Prompt"
+msgstr "默认提示词模板"
+
+#. module: chat_openerp_hk
+#: model:ir.model,name:chat_openerp_hk.model_discuss_channel
+msgid "Discussion Channel"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__display_name
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__id
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__id
+msgid "ID"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,help:chat_openerp_hk.field_llm_config__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,help:chat_openerp_hk.field_llm_config__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_res_config_settings__IP
+msgid "Interface Address"
+msgstr "接口地址"
+
+#. module: chat_openerp_hk
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.chat_openerp_hk_res_config_setting_views
+msgid "Interface Config"
+msgstr "接口配置"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.actions.act_window,name:chat_openerp_hk.llm_config_action
+#: model:ir.ui.menu,name:chat_openerp_hk.llm_config_menu
+msgid "LLM"
+msgstr "大模型"
+
+#. module: chat_openerp_hk
+#: model:ir.actions.act_window,name:chat_openerp_hk.action_prompt_config
+#: model:ir.ui.menu,name:chat_openerp_hk.prompt_config_menu
+msgid "Prompt Template"
+msgstr "提示词模板"
+
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__write_uid
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__write_date
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model,name:chat_openerp_hk.model_mail_bot
+msgid "Mail Bot"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__model
+msgid "Model"
+msgstr "模型"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__name
+msgid "Model Name"
+msgstr "模型名称"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__model_URL
+msgid "Model host"
+msgstr "模型地址"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__note
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.llm_config_form_view
+msgid "Note"
+msgstr "备注"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,help:chat_openerp_hk.field_llm_config__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,help:chat_openerp_hk.field_llm_config__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__output_format
+msgid "Output"
+msgstr "输出格式"
+
+#. module: chat_openerp_hk
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.view_prompt_config_form
+msgid "Output Format"
+msgstr "输出格式"
+
+#. module: chat_openerp_hk
+#: model:ir.actions.act_window,name:chat_openerp_hk.action_prompt_config
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__prompt
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.view_prompt_config_form
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.view_prompt_config_tree
+msgid "Prompt"
+msgstr "提示词模板"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__name
+msgid "Prompt Name"
+msgstr "提示词模板名称"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__system
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.view_prompt_config_form
+msgid "System"
+msgstr "系统设定"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_llm_config__temperature
+msgid "Temperature"
+msgstr "随机性"
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_prompt_config__user
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.view_prompt_config_form
+msgid "User"
+msgstr "用户输入"
+
+#. module: chat_openerp_hk
+#: model_terms:ir.ui.view,arch_db:chat_openerp_hk.chat_openerp_hk_res_config_setting_views
+msgid "chat_openerp_hk"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.actions.server,name:chat_openerp_hk.action_init_type_ir_actions_server
+msgid "Initialize chat mode"
+msgstr "初始化聊天模式"
+
+#. module: chat_openerp_hk
+#: model:ir.model,name:chat_openerp_hk.model_llm_config
+msgid "大模型配置"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model,name:chat_openerp_hk.model_prompt_config
+msgid "提示词模板"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields.selection,name:chat_openerp_hk.selection__discuss_channel__type__normal_chat
+msgid "普通聊天"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields.selection,name:chat_openerp_hk.selection__discuss_channel__type__query_database
+msgid "查询数据库"
+msgstr ""
+
+#. module: chat_openerp_hk
+#: model:ir.model.fields,field_description:chat_openerp_hk.field_discuss_channel__type
+msgid "模式"
+msgstr ""

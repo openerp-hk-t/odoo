@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem sequence='1' id="chat_openerp_hk_menu" name="AI"/>
+        <menuitem sequence='2' id="llm_config_menu" name="LLM" action="chat_openerp_hk.llm_config_action"
+                  parent="chat_openerp_hk.chat_openerp_hk_menu"/>
+        <menuitem id="prompt_config_menu" name="Prompt Template" sequence="10" parent="chat_openerp_hk.chat_openerp_hk_menu"
+                  action="action_prompt_config"/>
+
+    </data>
+</odoo>
